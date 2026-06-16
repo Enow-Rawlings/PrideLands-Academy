@@ -35,14 +35,14 @@ export const IMAGES = {
 
   // Campus / culture
   campus1:          'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=600&h=400&fit=crop&q=80',
-  campus2:          'https://images.unsplash.com/photo-1581362716668-5efa8d0e3af7?w=600&h=400&fit=crop&q=80',
+  campus2:          'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop&q=80',
   campus3:          'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop&q=80',
-  campus4:          'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&h=400&fit=crop&q=80',
+  campus4:          'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&h=400&fit=crop&q=80',
   campus5:          'https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=400&fit=crop&q=80',
   campus6:          'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop&q=80',
 
   // Programs
-  engineering:      'https://images.unsplash.com/photo-1581092921461-eab10380ed66?w=800&h=500&fit=crop&q=80',
+  engineering:      'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=500&fit=crop&q=80',
   architecture:     'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&h=500&fit=crop&q=80',
   business:         'https://images.unsplash.com/photo-1664575602276-acd073f104c1?w=800&h=500&fit=crop&q=80',
   technology:       'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=500&fit=crop&q=80',
