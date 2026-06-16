@@ -12,16 +12,16 @@ const newsItems = [
     title: 'Academy Partners with Global Tech Giant for AI Lab',
     excerpt: 'A landmark agreement brings state-of-the-art artificial intelligence infrastructure to our Engineering department.',
     image: UNSPLASH_PHOTOS.news1,
-    date: 'Nov 12, 2024',
+    date: 'Nov 12, 2025',
     path: '/news',
   },
   {
     id: 2,
     category: 'Events',
-    title: 'Celebrating the Class of 2024: A Record Success',
+    title: 'Celebrating the Class of 2025: A Record Success',
     excerpt: 'The latest graduation ceremony saw our largest cohort yet, with 95% of graduates already placed in industry roles.',
     image: UNSPLASH_PHOTOS.news2,
-    date: 'Oct 28, 2024',
+    date: 'Jan 28, 2026',
     path: '/news',
   },
   {
@@ -30,7 +30,7 @@ const newsItems = [
     title: 'New Research Hub to Focus on Sustainable Energy',
     excerpt: 'PrideLands launches its multidisciplinary center focused on renewable solutions for sub-Saharan Africa.',
     image: UNSPLASH_PHOTOS.news3,
-    date: 'Oct 15, 2024',
+    date: 'May 15, 2026',
     path: '/news',
   },
 ]
