@@ -1,4 +1,3 @@
-// FILE: tailwind.config.js  ← project ROOT
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
