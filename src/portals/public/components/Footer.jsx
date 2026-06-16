@@ -59,7 +59,7 @@ export default function Footer() {
             </Link>
 
             <p className="text-navy-300 text-sm leading-relaxed mb-6 max-w-xs">
-              Empowering the next generation of Africans with excellence, innovation, and integrity since 1998.
+              Empowering the next generation of Africans with excellence, innovation, and integrity since 2026.
             </p>
 
             <div className="space-y-2.5 mb-6">
