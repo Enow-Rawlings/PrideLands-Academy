@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowRight, Calendar, Tag } from 'lucide-react'
 import { UNSPLASH_PHOTOS } from '@/lib/utils'
+import { IMAGES } from '@/lib/theme'
 
 const newsItems = [
   {
@@ -11,7 +12,7 @@ const newsItems = [
     category: 'Partnership',
     title: 'Academy Partners with Global Tech Giant for AI Lab',
     excerpt: 'A landmark agreement brings state-of-the-art artificial intelligence infrastructure to our Engineering department.',
-    image: UNSPLASH_PHOTOS.news1,
+    image: IMAGES.globalSeminar1,
     date: 'Nov 12, 2025',
     path: '/news',
   },
@@ -20,7 +21,7 @@ const newsItems = [
     category: 'Events',
     title: 'Celebrating the Class of 2025: A Record Success',
     excerpt: 'The latest graduation ceremony saw our largest cohort yet, with 95% of graduates already placed in industry roles.',
-    image: UNSPLASH_PHOTOS.news2,
+    image: IMAGES.globalSeminar2,
     date: 'Jan 28, 2026',
     path: '/news',
   },

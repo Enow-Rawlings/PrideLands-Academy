@@ -285,7 +285,7 @@ export default function About() {
               </div>
               <div className="mt-8 flex items-center gap-3">
                 <div className="w-10 h-px bg-gold-500" />
-                <p className="font-display font-600 text-navy-900 text-sm">Dr. Nkemelu Vidal</p>
+                <p className="font-display font-600 text-navy-900 text-sm">Dr. Mbi Vahid</p>
               </div>
               <Link to="/leadership" className="inline-flex items-center gap-2 mt-6 text-navy-900 font-display font-600 text-sm hover:text-gold-600 transition-colors group">
                 Meet the Leadership <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
@@ -407,10 +407,10 @@ export default function About() {
 
             {/* Right — image grid */}
             <FadeUp delay={0.2}>
-              <div className="grid grid-cols-2 gap-3 h-[420px]">
-                <img src={IMAGES.campus1} alt="" className="rounded-xl object-cover w-full h-full row-span-2" />
-                <img src={IMAGES.campus2} alt="" className="rounded-xl object-cover w-full h-[49%]" />
-                <img src={IMAGES.campus3} alt="" className="rounded-xl object-cover w-full h-[49%]" />
+              <div className="grid grid-cols-2 grid-rows-2 gap-3 h-[420px] min-h-0">
+                <img src={IMAGES.campus1} alt="Campus Life" className="rounded-xl object-cover w-full h-full row-span-2" />
+                <img src={IMAGES.globalSeminar2} alt="Innovative Labs" className="rounded-xl object-cover w-full h-full" />
+                <img src={IMAGES.globalSeminar1} alt="Global Seminars" className="rounded-xl object-cover w-full h-full" />
               </div>
             </FadeUp>
 
@@ -439,7 +439,7 @@ export default function About() {
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden relative group">
-              <img src={IMAGES.campus3} alt="Global Seminars" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+              <img src={IMAGES.globalSeminar2} alt="Global Seminars" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
               <div className="absolute inset-0 bg-navy-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
                 <span className="text-white font-display font-600 text-sm">Global Seminars</span>
               </div>

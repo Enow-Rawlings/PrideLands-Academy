@@ -1,5 +1,7 @@
 
 import directorImage from './images/director.png'
+import globalSeminar1 from './images/global-seminar1.png'
+import globalSeminar2 from './images/global-seminar2.png'
 
 // BRAND COLORS
 export const COLORS = {
@@ -36,10 +38,14 @@ export const IMAGES = {
   // Campus / culture
   campus1:          'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=600&h=400&fit=crop&q=80',
   campus2:          'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop&q=80',
-  campus3:          'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop&q=80',
+  campus3:          'https://images.unsplash.com/photo-1496307653780-42ee777d4833?w=600&h=400&fit=crop&q=80',
   campus4:          'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&h=400&fit=crop&q=80',
   campus5:          'https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=400&fit=crop&q=80',
   campus6:          'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop&q=80',
+  // Global seminars
+  globalSeminar1:   globalSeminar1,
+  globalSeminar2:   globalSeminar2,
+  globalSeminar3:   'https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop&q=80',
 
   // Programs
   engineering:      'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=500&fit=crop&q=80',

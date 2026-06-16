@@ -92,8 +92,7 @@ export default function HeroSection() {
               className="flex items-center gap-2 mb-6"
             >
               <span className="block w-8 h-0.5 bg-gold-500 rounded-full" />
-              <span className="text-gold-400 font-display font-600 text-sm tracking-widest uppercase">
-                PrideLands Academy
+              <span className="text-gold-400 font-display font-600 text-sm tracking-widest uppercase"> PrideLands Academy
               </span>
             </motion.div>
 
