@@ -19,6 +19,10 @@ export const BRAND = {
     linkedin:  'https://linkedin.com/company/pridelandsacademy',
     youtube:   'https://youtube.com/@pridelandsacademy',
   },
+  whatsapp: '+237000000000',      // ← swap in real number (digits only)
+whatsappMessage: 'Hello PrideLands Academy, I have a question about',
+mapEmbedUrl: 'https://www.google.com/maps/embed?...',  // ← swap with real embed src
+
 };
 
 //Brand Colors
@@ -33,14 +37,28 @@ export const COLORS = {
 
 // Public Navigation
 export const PUBLIC_NAV = [
-  { label: 'Home',        path: '/' },
-  { label: 'About Us',    path: '/about' },
-  { label: 'Programs',    path: '/programs' },
-  { label: 'Admissions',  path: '/admissions' },
-  { label: 'Student Life',path: '/student-life' },
-  { label: 'News',        path: '/news' },
-  { label: 'Gallery',     path: '/gallery' },
-  { label: 'Contact',     path: '/contact' },
+  { label: 'Home',         path: '/' },
+  {
+    label: 'About',
+    path: '/about',
+    children: [
+      { label: 'About Us',       path: '/about' },
+      { label: 'Leadership Team',path: '/leadership' },
+    ],
+  },
+  {
+    label: 'Programs',
+    path: '/programs',
+    children: [
+      { label: 'All Programs',   path: '/programs' },
+      { label: 'Admissions',     path: '/admissions' },
+      { label: 'Apply Now',      path: '/apply' },
+    ],
+  },
+  { label: 'Student Life', path: '/student-life' },
+  { label: 'News',         path: '/news' },
+  { label: 'Gallery',      path: '/gallery' },
+  { label: 'Contact',      path: '/contact' },
 ];
 
 //Programs 
@@ -196,49 +214,128 @@ export const ADMISSION_STEPS = [
   },
 ];
 
-//FAQ 
-export const FAQS = [
-  {
-    question: 'What are the entry requirements for PrideLands Academy?',
-    answer:
-      'Generally, applicants need a WAEC, GCE A-Level, or equivalent qualification. Specific programmes may have additional requirements. Please check the individual programme pages for details.',
-  },
-  {
-    question: 'How do I apply for admission?',
-    answer:
-      'Applications are submitted online through our Admissions portal. You will need to create an account, complete the application form, and upload required documents.',
-  },
-  {
-    question: 'What is the academic calendar?',
-    answer:
-      'PrideLands Academy runs two semesters per academic year. The first semester typically begins in September and the second in February. Check the Admissions page for specific dates.',
-  },
-  {
-    question: 'Are scholarships available?',
-    answer:
-      'Yes. PrideLands Group offers merit-based and need-based scholarships for qualifying students. Details are available during the admissions process.',
-  },
-  {
-    question: 'What payment methods are accepted for tuition?',
-    answer:
-      'We accept payments via FapShi, bank transfer, and mobile money. You can manage all payments from your student portal.',
-  },
-  {
-    question: 'Are certificates internationally recognised?',
-    answer:
-      'PrideLands Academy certificates include a QR verification system and are recognised across Africa. We are actively pursuing international accreditations.',
-  },
-  {
-    question: 'Do you offer online or hybrid programmes?',
-    answer:
-      'Yes, several of our professional diploma programmes are available in hybrid format. Full online options are being developed and will be announced soon.',
-  },
-  {
-    question: 'What is the student-to-lecturer ratio?',
-    answer:
-      'We maintain small cohorts to ensure personalised attention. Our average student-to-lecturer ratio is 20:1.',
-  },
-];
+// ─── FAQS — categorized (used on FAQ page and Admissions page) ────
+// To add a question: add an object to the relevant category array.
+export const FAQ_CATEGORIES = [
+  'All',
+  'Admissions',
+  'Programmes',
+  'Tuition & Finance',
+  'Student Life',
+  'Technical / Portal',
+]
+
+export const FAQS_BY_CATEGORY = {
+  Admissions: [
+    {
+      question: 'What are the entry requirements for PrideLands Academy?',
+      answer: 'Generally, applicants need a WAEC, GCE A-Level, or equivalent qualification. Specific programmes may have additional requirements. Please check the individual programme pages for details.',
+    },
+    {
+      question: 'How do I apply for admission?',
+      answer: 'Applications are submitted online through our Admissions portal. You will need to create an account, complete the application form, and upload required documents including your academic transcripts and a valid ID.',
+    },
+    {
+      question: 'What is the academic calendar?',
+      answer: 'PrideLands Academy runs two main semesters per academic year. The first semester typically begins in September and the second in February. Short-course intakes are also available in June. Check the Admissions page for exact dates.',
+    },
+    {
+      question: 'How long does the admissions review take?',
+      answer: 'Our admissions committee reviews completed applications within 5–7 working days. You will receive an email notification of the outcome. Incomplete applications may take longer.',
+    },
+    {
+      question: 'Can I apply for more than one programme?',
+      answer: 'Yes, you may apply for up to two programmes in the same intake cycle. Each programme requires a separate application. We recommend applying to your first choice first.',
+    },
+    {
+      question: 'Is there an application fee?',
+      answer: 'No. PrideLands Academy does not charge an application fee. Our online application is completely free to submit.',
+    },
+  ],
+  Programmes: [
+    {
+      question: 'What programmes does PrideLands Academy offer?',
+      answer: 'We offer Bachelor\'s Degrees, Diplomas, and short Certificate courses across Technology & AI, Business Strategy, Entrepreneurship, and Professional Development. Visit the Programmes page for the full list.',
+    },
+    {
+      question: 'Do you offer online or hybrid programmes?',
+      answer: 'Yes. Several of our professional diploma and certificate programmes are available in hybrid or fully online format. Full-degree programmes are primarily on-campus with hybrid options available.',
+    },
+    {
+      question: 'What is the student-to-lecturer ratio?',
+      answer: 'We maintain small cohorts to ensure personalised attention. Our average student-to-lecturer ratio is 20:1, allowing for meaningful interaction and mentorship.',
+    },
+    {
+      question: 'Are certificates internationally recognised?',
+      answer: 'PrideLands Academy certificates include a QR verification system and are recognised across Africa. We are actively pursuing international accreditations with bodies in Europe and North America.',
+    },
+    {
+      question: 'Can I transfer credits from another institution?',
+      answer: 'Credit transfers are evaluated on a case-by-case basis by our academic team. You will need to submit your previous institution\'s transcripts and course outlines during the application process.',
+    },
+  ],
+  'Tuition & Finance': [
+    {
+      question: 'Are scholarships available?',
+      answer: 'Yes. PrideLands Group offers merit-based and need-based scholarships for qualifying students. We also offer the PrideLands Legacy Grant for dependents of PrideLands Group employees and partners. Details are available on the Admissions page.',
+    },
+    {
+      question: 'What payment methods are accepted for tuition?',
+      answer: 'We accept payments via FapShi, bank transfer, and mobile money. You can view your balance, payment history, and make payments directly from your student portal.',
+    },
+    {
+      question: 'Is a payment plan available?',
+      answer: 'Yes. Students can split their semester tuition into two installments — one at the start of the semester and one at the midpoint. Contact the Finance Office to set up a plan.',
+    },
+    {
+      question: 'What happens if I miss a tuition payment?',
+      answer: 'A grace period of 14 days applies after each payment deadline. After that, access to course materials and the student portal may be temporarily restricted until payment is received. Contact the Finance Office immediately if you are facing difficulties.',
+    },
+    {
+      question: 'Does tuition cover accommodation?',
+      answer: 'No. Tuition fees cover academic instruction, access to facilities, and course materials only. Accommodation is arranged and priced separately. Contact Student Affairs for accommodation options.',
+    },
+  ],
+  'Student Life': [
+    {
+      question: 'What student clubs and activities are available?',
+      answer: 'PrideLands Academy hosts a growing number of student-led clubs including the Entrepreneurship Club, Tech Society, Debate Club, Cultural Arts Association, and Sports teams. New clubs can be proposed through Student Affairs.',
+    },
+    {
+      question: 'Is accommodation available on campus?',
+      answer: 'On-campus accommodation is currently being developed. In the meantime, Student Affairs maintains a list of verified off-campus housing options near the campus.',
+    },
+    {
+      question: 'What career support do students receive?',
+      answer: 'Our Career Services team provides CV reviews, interview coaching, employer networking events, and direct placement assistance. We also host an annual Career Fair with 60+ employers on campus.',
+    },
+    {
+      question: 'Do you have an exchange programme?',
+      answer: 'Yes. PrideLands Academy has signed MOUs with partner universities in East Africa and is in discussion with institutions in Europe. Exchange opportunities are available for second and third-year students.',
+    },
+  ],
+  'Technical / Portal': [
+    {
+      question: 'How do I access the Student Portal?',
+      answer: 'Once enrolled, you will receive your login credentials by email. Visit the Student Portal Login page at the top of the website and enter your student ID and password. Contact IT Support if you have login issues.',
+    },
+    {
+      question: 'I forgot my portal password. What do I do?',
+      answer: 'Click "Forgot Password" on the login page and enter your registered email. A password reset link will be sent to you. If you no longer have access to that email, contact IT Support directly.',
+    },
+    {
+      question: 'How do I download my transcript or certificate?',
+      answer: 'Completed transcripts and certificates are available from within your Student Portal under the Transcript and Certificates sections respectively. Certificates include a QR code for employer verification.',
+    },
+    {
+      question: 'What browsers are supported by the Student Portal?',
+      answer: 'The portal works best on Chrome, Firefox, Edge, and Safari (latest versions). We recommend keeping your browser updated for the best experience. Mobile support is fully available.',
+    },
+  ],
+}
+
+// Flat list (for Admissions page and other quick-use cases)
+export const FAQS = Object.values(FAQS_BY_CATEGORY).flat()
 
 // Testimonials 
 export const TESTIMONIALS = [
@@ -360,3 +457,4 @@ export const UNSPLASH = {
   library:   'library-books-students',
   graduation:'graduation-africa',
 };
+
