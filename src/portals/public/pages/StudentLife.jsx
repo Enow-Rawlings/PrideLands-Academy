@@ -385,7 +385,7 @@ export default function StudentLife() {
                       <MapPin size={16} className="text-navy-900" />
                     </div>
                     <div>
-                      <p className="font-display font-700 text-navy-900 text-sm">Yaoundé, Cameroon</p>
+                      <p className="font-display font-700 text-navy-900 text-sm">Buea, Cameroon</p>
                       <p className="text-gray-400 text-xs">Verified off-campus housing available nearby</p>
                     </div>
                   </div>

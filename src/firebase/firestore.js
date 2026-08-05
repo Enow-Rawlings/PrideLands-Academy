@@ -182,6 +182,13 @@
 // from a component. This keeps data logic separate from UI.
 // ─────────────────────────────────────────────────────────────────
 
+// FILE: src/firebase/firestore.js
+// ─────────────────────────────────────────────────────────────────
+// Reusable Firestore CRUD helpers.
+// All portal pages import from here — never call Firestore directly
+// from a component. This keeps data logic separate from UI.
+// ─────────────────────────────────────────────────────────────────
+
 import {
   collection, doc,
   getDoc, getDocs, addDoc, setDoc, updateDoc, deleteDoc,
@@ -300,6 +307,7 @@ export const getCourses        = (c=[])     => getDocuments('courses', c)
 export const getCourse         = (id)       => getDocument('courses', id)
 export const createCourse      = (data)     => createDocument('courses', data)
 export const updateCourse      = (id, data) => updateDocument('courses', id, data)
+export const deleteCourse      = (id)       => deleteDocument('courses', id)
 
 // ── Enrollments ─────────────────────────────────────────────────
 export const getEnrollments    = (c=[])     => getDocuments('enrollments', c)
@@ -320,6 +328,7 @@ export const updateSubmission  = (id, data) => updateDocument('submissions', id,
 export const getResults        = (c=[])     => getDocuments('results', c)
 export const createResult      = (data)     => createDocument('results', data)
 export const updateResult      = (id, data) => updateDocument('results', id, data)
+export const deleteResult      = (id)       => deleteDocument('results', id)
 
 // ── Payments ────────────────────────────────────────────────────
 export const getPayments       = (c=[])     => getDocuments('payments', c)
